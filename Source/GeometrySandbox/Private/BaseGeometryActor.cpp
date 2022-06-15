@@ -23,7 +23,8 @@ void ABaseGeometryActor::BeginPlay()
 
 	Initiallocation = GetActorLocation();
 
-	//printStringTypes();
+	//PrintTransform();
+	//PrintStringTypes();
 	//printTypes();
 }
 
@@ -31,14 +32,11 @@ void ABaseGeometryActor::BeginPlay()
 void ABaseGeometryActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	FVector Currentlocation = GetActorLocation();
-	float time = GetWorld()->GetTimeSeconds();
-	Currentlocation.Z = Initiallocation.Z + Amplitude * FMath::Sin(Frequency * time);
-	
-	SetActorLocation(Currentlocation);
+
+	HandleMovement();
 }
 
-void ABaseGeometryActor::printTypes()
+void ABaseGeometryActor::PrintTypes()
 {
 	UE_LOG(LogBaseGeometry, Warning, TEXT("Actor name %s"), *GetName())
 	UE_LOG(LogBaseGeometry, Warning, TEXT("Hello"));
@@ -48,10 +46,9 @@ void ABaseGeometryActor::printTypes()
 	UE_LOG(LogBaseGeometry, Warning, TEXT("Weapons num: %d, Kills num: %i"), WeaponsNum, KillsNum);
 }
 
-void ABaseGeometryActor::printStringTypes()
+void ABaseGeometryActor::PrintStringTypes()
 {
-	FString Name = "ZENOS";
-	FString WeaponsNumStr = "KillsNum = " + FString::FromInt(KillsNum);
+	FString Name = "ZENOS";	FString WeaponsNumStr = "KillsNum = " + FString::FromInt(KillsNum);
 	UE_LOG(LogBaseGeometry, Display, TEXT("Name:%s"), *Name);
 
 	FString Stat = FString::Printf(TEXT(" \n == All stat == \n %s"), *WeaponsNumStr);
@@ -61,7 +58,7 @@ void ABaseGeometryActor::printStringTypes()
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, Stat, true, FVector2D(1.5f, 1.5f));
 }
 
-void ABaseGeometryActor::printTransform()
+void ABaseGeometryActor::PrintTransform()
 {
 	FTransform Transform = GetActorTransform();
 	FVector Location = Transform.GetLocation();
@@ -75,5 +72,24 @@ void ABaseGeometryActor::printTransform()
 	UE_LOG(LogBaseGeometry, Warning, TEXT("Scale %s"), *Scale.ToString());
 
 	UE_LOG(LogBaseGeometry, Error, TEXT("Human Transform %s"), *Transform.ToHumanReadableString());
+}
+
+void ABaseGeometryActor::HandleMovement()
+{
+	switch (GeometryData.MoveType)
+	{
+	case EMovementType::Sin:
+	{
+		FVector Currentlocation = GetActorLocation();
+		float time = GetWorld()->GetTimeSeconds();
+		Currentlocation.Z = Initiallocation.Z + GeometryData.Amplitude * FMath::Sin(GeometryData.Frequency * time);
+
+		SetActorLocation(Currentlocation);
+	}
+	break;
+
+	case EMovementType::Static: break;
+	default:break;
+	}
 }
 

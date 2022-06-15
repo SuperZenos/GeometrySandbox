@@ -13,10 +13,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GEOMETRYSANDBOX_BaseGeometryActor_generated_h
 
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_SPARSE_DATA
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_RPC_WRAPPERS
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_RPC_WRAPPERS_NO_PURE_DECLS
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_20_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FGeometryData_Statics; \
+	GEOMETRYSANDBOX_API static class UScriptStruct* StaticStruct();
+
+
+template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<struct FGeometryData>();
+
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_SPARSE_DATA
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_RPC_WRAPPERS
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseGeometryActor(); \
 	friend struct Z_Construct_UClass_ABaseGeometryActor_Statics; \
@@ -25,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseGeometryActor)
 
 
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_INCLASS \
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_INCLASS \
 private: \
 	static void StaticRegisterNativesABaseGeometryActor(); \
 	friend struct Z_Construct_UClass_ABaseGeometryActor_Statics; \
@@ -34,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseGeometryActor)
 
 
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_STANDARD_CONSTRUCTORS \
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABaseGeometryActor(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABaseGeometryActor) \
@@ -47,7 +54,7 @@ private: \
 public:
 
 
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABaseGeometryActor(ABaseGeometryActor&&); \
@@ -58,25 +65,25 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABaseGeometryActor)
 
 
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_11_PROLOG
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_GENERATED_BODY_LEGACY \
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_32_PROLOG
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_SPARSE_DATA \
-	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_RPC_WRAPPERS \
-	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_INCLASS \
-	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_STANDARD_CONSTRUCTORS \
+	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_SPARSE_DATA \
+	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_RPC_WRAPPERS \
+	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_INCLASS \
+	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_GENERATED_BODY \
+#define FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_SPARSE_DATA \
-	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_INCLASS_NO_PURE_DECLS \
-	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_14_ENHANCED_CONSTRUCTORS \
+	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_SPARSE_DATA \
+	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_INCLASS_NO_PURE_DECLS \
+	FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_35_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -86,5 +93,12 @@ template<> GEOMETRYSANDBOX_API UClass* StaticClass<class ABaseGeometryActor>();
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h
 
+
+#define FOREACH_ENUM_EMOVEMENTTYPE(op) \
+	op(EMovementType::Sin) \
+	op(EMovementType::Static) 
+
+enum class EMovementType : uint8;
+template<> GEOMETRYSANDBOX_API UEnum* StaticEnum<EMovementType>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
