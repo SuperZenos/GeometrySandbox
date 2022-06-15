@@ -1,0 +1,14 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\unreal projects\\geometrysandbox\\source\\geometrysandbox\\geometrysandbox.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unreal projects\\geometrysandbox\\intermediate\\build\\win64\\geometrysandboxeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\unreal projects\\geometrysandbox\\intermediate\\build\\win64\\unrealeditor\\development\\geometrysandbox\\definitions.geometrysandbox.h",
+            "d:\\unreal projects\\geometrysandbox\\source\\geometrysandbox\\geometrysandbox.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

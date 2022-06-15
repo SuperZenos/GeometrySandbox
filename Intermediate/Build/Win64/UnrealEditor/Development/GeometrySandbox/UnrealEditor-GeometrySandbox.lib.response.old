@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-GeometrySandbox.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\GeometrySandboxEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometrySandbox.cpp.obj"
+"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometrySandboxGameModeBase.cpp.obj"
+"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometrySandbox.init.gen.cpp.obj"
+"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometrySandboxGameModeBase.gen.cpp.obj"
+"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\Default.rc2.res"
+/OUT:"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\UnrealEditor-GeometrySandbox.lib"
