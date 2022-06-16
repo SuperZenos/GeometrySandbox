@@ -4,13 +4,14 @@
 #include "BaseGeometryActor.h"
 #include "Engine/Engine.h"
 #include "Materials/MaterialInstanceDynamic.h"
+#include "TimerManager.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogBaseGeometry, All, All)
 
 // Sets default values
 ABaseGeometryActor::ABaseGeometryActor()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>("BaseMesh");
@@ -21,13 +22,15 @@ ABaseGeometryActor::ABaseGeometryActor()
 void ABaseGeometryActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 	Initiallocation = GetActorLocation();
 
 	//PrintTransform();
 	//PrintStringTypes();
-	//printTypes();
-	SetColor();
+	//PrintTypes();
+	SetColor(GeometryData.Color);
+
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, GeometryData.TimerRate, true);
 }
 
 // Called every frame
@@ -40,20 +43,18 @@ void ABaseGeometryActor::Tick(float DeltaTime)
 
 void ABaseGeometryActor::PrintTypes()
 {
-	UE_LOG(LogBaseGeometry, Warning, TEXT("Actor name %s"), *GetName())
-	UE_LOG(LogBaseGeometry, Warning, TEXT("Hello"));
-	UE_LOG(LogBaseGeometry, Warning, TEXT("Hello"));
-	UE_LOG(LogBaseGeometry, Warning, TEXT("Hello"));
+	UE_LOG(LogBaseGeometry, Warning, TEXT("Actor name %s"), *GetName());
 
 	UE_LOG(LogBaseGeometry, Warning, TEXT("Weapons num: %d, Kills num: %i"), WeaponsNum, KillsNum);
 }
 
 void ABaseGeometryActor::PrintStringTypes()
 {
-	FString Name = "ZENOS";	FString WeaponsNumStr = "KillsNum = " + FString::FromInt(KillsNum);
+	FString Name = "ZENOS";	
 	UE_LOG(LogBaseGeometry, Display, TEXT("Name:%s"), *Name);
 
-	FString Stat = FString::Printf(TEXT(" \n == All stat == \n %s"), *WeaponsNumStr);
+	FString KillsNumStr = "KillsNum = " + FString::FromInt(KillsNum);
+	FString Stat = FString::Printf(TEXT(" \n == All stat == \n %s"), *KillsNumStr);
 	UE_LOG(LogBaseGeometry, Warning, TEXT("%s"), *Stat);
 
 	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, Name);
@@ -95,12 +96,19 @@ void ABaseGeometryActor::HandleMovement()
 	}
 }
 
-void ABaseGeometryActor::SetColor()
+void ABaseGeometryActor::SetColor(const FLinearColor& Color)
 {
 	UMaterialInstanceDynamic* DynMaterial = BaseMesh->CreateAndSetMaterialInstanceDynamic(0);
 	if (DynMaterial)
 	{
-		DynMaterial->SetVectorParameterValue("Color", GeometryData.Color);
+		DynMaterial->SetVectorParameterValue("Color", Color);
 	}
+}
+
+void ABaseGeometryActor::OnTimerFired()
+{
+	const FLinearColor NewColor = FLinearColor::MakeRandomColor();
+	UE_LOG(LogBaseGeometry, Display, TEXT("Color to set up: %s"), *NewColor.ToString());
+	SetColor(NewColor);
 }
 

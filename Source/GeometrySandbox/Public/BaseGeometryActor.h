@@ -20,67 +20,68 @@ struct FGeometryData
 	GENERATED_USTRUCT_BODY()
 
 	UPROPERTY(EditAnywhere, Category = "Movement")
-	float Amplitude = 50.0f;
+		float Amplitude = 50.0f;
 
 	UPROPERTY(EditAnywhere, Category = "Movement")
-	float Frequency = 2.0f;
+		float Frequency = 2.0f;
 
 	UPROPERTY(EditAnywhere, Category = "Movement")
-	EMovementType MoveType = EMovementType::Static;
+		EMovementType MoveType = EMovementType::Static;
 
 	UPROPERTY(EditAnywhere, Category = "Design")
-	FLinearColor Color = FLinearColor::Black;
+		FLinearColor Color = FLinearColor::Black;
 
 	UPROPERTY(EditAnywhere, Category = "Design")
-
+		float TimerRate = 3.0f;
 };
 
 UCLASS()
 class GEOMETRYSANDBOX_API ABaseGeometryActor : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ABaseGeometryActor();
 
 	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* BaseMesh;
+		UStaticMeshComponent* BaseMesh;
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 private:
 	FVector Initiallocation;
 
+	FTimerHandle TimerHandle;
 	void PrintTypes();
 	void PrintStringTypes();
 	void PrintTransform();
 	void HandleMovement();
-	void SetColor();
-	
+	void SetColor(const FLinearColor& Color);
+	void OnTimerFired();
+
 protected:
+
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 	UPROPERTY(EditAnywhere, Category = "GeometryData")
-	FGeometryData GeometryData;
-	
+		FGeometryData GeometryData;
+
 	UPROPERTY(EditAnywhere, Category = "Weapon")
-	int32 WeaponsNum = 4;
+		int32 WeaponsNum = 4;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Stat")
-	int32 KillsNum = 7;
+		int32 KillsNum = 7;
 
 	UPROPERTY(EditInstanceOnly, Category = "Health")
-	float Health = 35.55555;
+		float Health = 35.55555;
 
 	UPROPERTY(EditAnywhere, Category = "Health")
-	bool isDead = 0;
+		bool isDead = 0;
 
 	UPROPERTY(VisibleAnywhere, Category = "Weapon")
-	bool HasWeapon = 1;
+		bool HasWeapon = 1;
 
 };
