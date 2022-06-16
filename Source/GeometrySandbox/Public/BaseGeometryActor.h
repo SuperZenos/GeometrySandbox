@@ -27,6 +27,12 @@ struct FGeometryData
 
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	EMovementType MoveType = EMovementType::Static;
+
+	UPROPERTY(EditAnywhere, Category = "Design")
+	FLinearColor Color = FLinearColor::Black;
+
+	UPROPERTY(EditAnywhere, Category = "Design")
+
 };
 
 UCLASS()
@@ -56,7 +62,8 @@ private:
 	void PrintStringTypes();
 	void PrintTransform();
 	void HandleMovement();
-
+	void SetColor();
+	
 protected:
 	UPROPERTY(EditAnywhere, Category = "GeometryData")
 	FGeometryData GeometryData;
@@ -75,4 +82,5 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Weapon")
 	bool HasWeapon = 1;
+
 };
