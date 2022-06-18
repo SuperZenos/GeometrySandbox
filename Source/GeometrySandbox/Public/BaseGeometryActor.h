@@ -55,6 +55,10 @@ private:
 	FVector Initiallocation;
 
 	FTimerHandle TimerHandle;
+
+	const int32 MaxTimerCount = 5;
+	int32 TimerCount = 0;
+
 	void PrintTypes();
 	void PrintStringTypes();
 	void PrintTransform();

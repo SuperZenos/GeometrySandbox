@@ -30,8 +30,8 @@ void ABaseGeometryActor::BeginPlay()
 	//PrintTypes();
 	SetColor(GeometryData.Color);
 
-	GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, GeometryData.TimerRate, true);
-}
+	//GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, GeometryData.TimerRate, true);
+} 
 
 // Called every frame
 void ABaseGeometryActor::Tick(float DeltaTime)
@@ -107,8 +107,17 @@ void ABaseGeometryActor::SetColor(const FLinearColor& Color)
 
 void ABaseGeometryActor::OnTimerFired()
 {
-	const FLinearColor NewColor = FLinearColor::MakeRandomColor();
-	UE_LOG(LogBaseGeometry, Display, TEXT("Color to set up: %s"), *NewColor.ToString());
-	SetColor(NewColor);
+	if (++TimerCount <= MaxTimerCount) 
+	{
+		const FLinearColor NewColor = FLinearColor::MakeRandomColor();
+		UE_LOG(LogBaseGeometry, Display, TEXT("Color to set up: %s"), *NewColor.ToString());
+		SetColor(NewColor);
+	}
+	else
+	{
+		UE_LOG(LogBaseGeometry, Warning, TEXT("Timer has been stopped!"));
+		GetWorldTimerManager().ClearTimer(TimerHandle);
+	}
 }
+	
 
