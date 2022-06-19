@@ -17,6 +17,9 @@ void AGeometryHubActor::BeginPlay()
 {
 	Super::BeginPlay();
 
+	DoActorSpawn_1();
+	DoActorSpawn_2();
+	DoActorSpawn_3();
 }
 
 // Called every frame
@@ -24,9 +27,6 @@ void AGeometryHubActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	DoActorSpawn_1();
-	DoActorSpawn_2();
-	DoActorSpawn_3();
 }
 
 void AGeometryHubActor::DoActorSpawn_1()
