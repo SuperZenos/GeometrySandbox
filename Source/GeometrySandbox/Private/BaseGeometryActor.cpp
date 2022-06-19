@@ -30,7 +30,7 @@ void ABaseGeometryActor::BeginPlay()
 	//PrintTypes();
 	SetColor(GeometryData.Color);
 
-	//GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, GeometryData.TimerRate, true);
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, GeometryData.TimerRate, true);
 } 
 
 // Called every frame
@@ -57,8 +57,11 @@ void ABaseGeometryActor::PrintStringTypes()
 	FString Stat = FString::Printf(TEXT(" \n == All stat == \n %s"), *KillsNumStr);
 	UE_LOG(LogBaseGeometry, Warning, TEXT("%s"), *Stat);
 
-	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, Name);
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, Stat, true, FVector2D(1.5f, 1.5f));
+	if(GEngine)
+	{ 
+		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, Name);
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, Stat, true, FVector2D(1.5f, 1.5f));
+	}
 }
 
 void ABaseGeometryActor::PrintTransform()
@@ -84,10 +87,13 @@ void ABaseGeometryActor::HandleMovement()
 	case EMovementType::Sin:
 	{
 		FVector Currentlocation = GetActorLocation();
-		float time = GetWorld()->GetTimeSeconds();
-		Currentlocation.Z = Initiallocation.Z + GeometryData.Amplitude * FMath::Sin(GeometryData.Frequency * time);
+		if (GetWorld())
+		{
+			float time = GetWorld()->GetTimeSeconds();
+			Currentlocation.Z = Initiallocation.Z + GeometryData.Amplitude * FMath::Sin(GeometryData.Frequency * time);
 
-		SetActorLocation(Currentlocation);
+			SetActorLocation(Currentlocation);
+		}
 	}
 	break;
 
@@ -98,6 +104,7 @@ void ABaseGeometryActor::HandleMovement()
 
 void ABaseGeometryActor::SetColor(const FLinearColor& Color)
 {
+	if (!BaseMesh) return;
 	UMaterialInstanceDynamic* DynMaterial = BaseMesh->CreateAndSetMaterialInstanceDynamic(0);
 	if (DynMaterial)
 	{

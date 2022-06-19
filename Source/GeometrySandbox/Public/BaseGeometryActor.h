@@ -47,10 +47,12 @@ public:
 	UPROPERTY(VisibleAnywhere)
 		UStaticMeshComponent* BaseMesh;
 
+	void SetGeometryData(const FGeometryData Data) { GeometryData = Data; }
+
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	
 private:
 	FVector Initiallocation;
 

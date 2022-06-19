@@ -34,10 +34,12 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\GeometrySandboxEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\BaseGeometryActor.cpp.obj"
 "D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometrySandbox.cpp.obj"
 "D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometrySandboxGameModeBase.cpp.obj"
-"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\BaseGeometryActor.cpp.obj"
+"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometryHubActor.cpp.obj"
 "D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\BaseGeometryActor.gen.cpp.obj"
+"D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometryHubActor.gen.cpp.obj"
 "D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometrySandbox.init.gen.cpp.obj"
 "D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\GeometrySandboxGameModeBase.gen.cpp.obj"
 "D:\Unreal Projects\GeometrySandbox\Intermediate\Build\Win64\UnrealEditor\Development\GeometrySandbox\Default.rc2.res"
