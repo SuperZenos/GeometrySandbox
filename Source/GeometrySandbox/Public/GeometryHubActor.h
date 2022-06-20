@@ -30,6 +30,11 @@ private:
 	void DoActorSpawn_2();
 	void DoActorSpawn_3();
 
+	UFUNCTION()
+		void OnColorChanged(const FLinearColor& Color, const FString& Name);
+
+	void OnTimerFinished(AActor* AActor);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

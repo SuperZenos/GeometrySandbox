@@ -9,15 +9,68 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBaseGeometryActor() {}
 // Cross Module References
-	GEOMETRYSANDBOX_API UEnum* Z_Construct_UEnum_GeometrySandbox_EMovementType();
+	GEOMETRYSANDBOX_API UFunction* Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_GeometrySandbox();
-	GEOMETRYSANDBOX_API UScriptStruct* Z_Construct_UScriptStruct_FGeometryData();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
+	GEOMETRYSANDBOX_API UEnum* Z_Construct_UEnum_GeometrySandbox_EMovementType();
+	GEOMETRYSANDBOX_API UScriptStruct* Z_Construct_UScriptStruct_FGeometryData();
 	GEOMETRYSANDBOX_API UClass* Z_Construct_UClass_ABaseGeometryActor_NoRegister();
 	GEOMETRYSANDBOX_API UClass* Z_Construct_UClass_ABaseGeometryActor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics
+	{
+		struct _Script_GeometrySandbox_eventOnColorChanged_Parms
+		{
+			FLinearColor Color;
+			FString Name;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Color_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_Color;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Name_MetaData[];
+#endif
+		static const UECodeGen_Private::FStrPropertyParams NewProp_Name;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Color_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Color = { "Color", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(_Script_GeometrySandbox_eventOnColorChanged_Parms, Color), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Color_MetaData, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Color_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Name_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStrPropertyParams Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Name = { "Name", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(_Script_GeometrySandbox_eventOnColorChanged_Parms, Name), METADATA_PARAMS(Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Name_MetaData, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Name_MetaData)) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Color,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::NewProp_Name,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_GeometrySandbox, nullptr, "OnColorChanged__DelegateSignature", nullptr, nullptr, sizeof(Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::_Script_GeometrySandbox_eventOnColorChanged_Parms), Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	static FEnumRegistrationInfo Z_Registration_Info_UEnum_EMovementType;
 	static UEnum* EMovementType_StaticEnum()
 	{
@@ -130,14 +183,14 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Amplitude = { "Amplitude", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, Amplitude), METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Amplitude_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Amplitude_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Amplitude = { "Amplitude", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, Amplitude), METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Amplitude_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Amplitude_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Frequency_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Frequency = { "Frequency", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, Frequency), METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Frequency_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Frequency_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Frequency = { "Frequency", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, Frequency), METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Frequency_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Frequency_MetaData)) };
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_MoveType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_MoveType_MetaData[] = {
@@ -145,21 +198,21 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_MoveType = { "MoveType", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, MoveType), Z_Construct_UEnum_GeometrySandbox_EMovementType, METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_MoveType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_MoveType_MetaData)) }; // 3467513699
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_MoveType = { "MoveType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, MoveType), Z_Construct_UEnum_GeometrySandbox_EMovementType, METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_MoveType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_MoveType_MetaData)) }; // 3467513699
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Color_MetaData[] = {
 		{ "Category", "Design" },
 		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Color = { "Color", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, Color), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Color_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Color_MetaData)) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Color = { "Color", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, Color), Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Color_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Color_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_TimerRate_MetaData[] = {
 		{ "Category", "Design" },
 		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_TimerRate = { "TimerRate", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, TimerRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_TimerRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_TimerRate_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_TimerRate = { "TimerRate", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FGeometryData, TimerRate), METADATA_PARAMS(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_TimerRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_TimerRate_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FGeometryData_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Amplitude,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGeometryData_Statics::NewProp_Frequency,
@@ -189,8 +242,52 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 		}
 		return Z_Registration_Info_UScriptStruct_GeometryData.InnerSingleton;
 	}
+	DEFINE_FUNCTION(ABaseGeometryActor::execGetGeometryData)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FGeometryData*)Z_Param__Result=P_THIS->GetGeometryData();
+		P_NATIVE_END;
+	}
 	void ABaseGeometryActor::StaticRegisterNativesABaseGeometryActor()
 	{
+		UClass* Class = ABaseGeometryActor::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetGeometryData", &ABaseGeometryActor::execGetGeometryData },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics
+	{
+		struct BaseGeometryActor_eventGetGeometryData_Parms
+		{
+			FGeometryData ReturnValue;
+		};
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BaseGeometryActor_eventGetGeometryData_Parms, ReturnValue), Z_Construct_UScriptStruct_FGeometryData, METADATA_PARAMS(nullptr, 0) }; // 3226645304
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseGeometryActor, nullptr, "GetGeometryData", nullptr, nullptr, sizeof(Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::BaseGeometryActor_eventGetGeometryData_Parms), Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ABaseGeometryActor);
 	UClass* Z_Construct_UClass_ABaseGeometryActor_NoRegister()
@@ -200,6 +297,7 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 	struct Z_Construct_UClass_ABaseGeometryActor_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -207,6 +305,10 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_BaseMesh_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_BaseMesh;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_OnColorChanged_MetaData[];
+#endif
+		static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnColorChanged;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_GeometryData_MetaData[];
 #endif
@@ -241,6 +343,9 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_GeometrySandbox,
 	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ABaseGeometryActor_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABaseGeometryActor_GetGeometryData, "GetGeometryData" }, // 3355605590
+	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseGeometryActor_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "BaseGeometryActor.h" },
@@ -256,12 +361,18 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_BaseMesh = { "BaseMesh", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseGeometryActor, BaseMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_BaseMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_BaseMesh_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_OnColorChanged_MetaData[] = {
+		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
+	};
+#endif
+	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_OnColorChanged = { "OnColorChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseGeometryActor, OnColorChanged), Z_Construct_UDelegateFunction_GeometrySandbox_OnColorChanged__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_OnColorChanged_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_OnColorChanged_MetaData)) }; // 1943543555
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_GeometryData_MetaData[] = {
 		{ "Category", "GeometryData" },
 		{ "ModuleRelativePath", "Public/BaseGeometryActor.h" },
 	};
 #endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_GeometryData = { "GeometryData", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseGeometryActor, GeometryData), Z_Construct_UScriptStruct_FGeometryData, METADATA_PARAMS(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_GeometryData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_GeometryData_MetaData)) }; // 197633474
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_GeometryData = { "GeometryData", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseGeometryActor, GeometryData), Z_Construct_UScriptStruct_FGeometryData, METADATA_PARAMS(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_GeometryData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_GeometryData_MetaData)) }; // 3226645304
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_WeaponsNum_MetaData[] = {
 		{ "Category", "Weapon" },
@@ -307,6 +418,7 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_HasWeapon = { "HasWeapon", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ABaseGeometryActor), &Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_HasWeapon_SetBit, METADATA_PARAMS(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_HasWeapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_HasWeapon_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseGeometryActor_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_BaseMesh,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_OnColorChanged,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_GeometryData,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_WeaponsNum,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseGeometryActor_Statics::NewProp_KillsNum,
@@ -322,11 +434,11 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ABaseGeometryActor_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ABaseGeometryActor_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -355,12 +467,12 @@ template<> GEOMETRYSANDBOX_API UScriptStruct* StaticStruct<FGeometryData>()
 		{ EMovementType_StaticEnum, TEXT("EMovementType"), &Z_Registration_Info_UEnum_EMovementType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3467513699U) },
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_Statics::ScriptStructInfo[] = {
-		{ FGeometryData::StaticStruct, Z_Construct_UScriptStruct_FGeometryData_Statics::NewStructOps, TEXT("GeometryData"), &Z_Registration_Info_UScriptStruct_GeometryData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGeometryData), 197633474U) },
+		{ FGeometryData::StaticStruct, Z_Construct_UScriptStruct_FGeometryData_Statics::NewStructOps, TEXT("GeometryData"), &Z_Registration_Info_UScriptStruct_GeometryData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGeometryData), 3226645304U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseGeometryActor, ABaseGeometryActor::StaticClass, TEXT("ABaseGeometryActor"), &Z_Registration_Info_UClass_ABaseGeometryActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseGeometryActor), 3522013136U) },
+		{ Z_Construct_UClass_ABaseGeometryActor, ABaseGeometryActor::StaticClass, TEXT("ABaseGeometryActor"), &Z_Registration_Info_UClass_ABaseGeometryActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseGeometryActor), 3895187687U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_71466028(TEXT("/Script/GeometrySandbox"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_1526845972(TEXT("/Script/GeometrySandbox"),
 		Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GeometrySandbox_Source_GeometrySandbox_Public_BaseGeometryActor_h_Statics::EnumInfo));
