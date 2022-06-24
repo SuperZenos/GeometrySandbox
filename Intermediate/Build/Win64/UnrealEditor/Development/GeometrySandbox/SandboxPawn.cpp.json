@@ -7,7 +7,9 @@
         "Includes": [
             "d:\\unreal projects\\geometrysandbox\\intermediate\\build\\win64\\unrealeditor\\development\\geometrysandbox\\definitions.geometrysandbox.h",
             "d:\\unreal projects\\geometrysandbox\\source\\geometrysandbox\\public\\sandboxpawn.h",
-            "d:\\unreal projects\\geometrysandbox\\intermediate\\build\\win64\\unrealeditor\\inc\\geometrysandbox\\sandboxpawn.generated.h"
+            "d:\\unreal projects\\geometrysandbox\\intermediate\\build\\win64\\unrealeditor\\inc\\geometrysandbox\\sandboxpawn.generated.h",
+            "d:\\ue\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
+            "d:\\ue\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\cameracomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

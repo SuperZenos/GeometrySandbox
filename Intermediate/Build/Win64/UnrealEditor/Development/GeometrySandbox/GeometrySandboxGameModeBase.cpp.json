@@ -13,7 +13,9 @@
             "d:\\ue\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gamemodebase.generated.h",
             "d:\\unreal projects\\geometrysandbox\\intermediate\\build\\win64\\unrealeditor\\inc\\geometrysandbox\\geometrysandboxgamemodebase.generated.h",
             "d:\\unreal projects\\geometrysandbox\\source\\geometrysandbox\\public\\sandboxpawn.h",
-            "d:\\unreal projects\\geometrysandbox\\intermediate\\build\\win64\\unrealeditor\\inc\\geometrysandbox\\sandboxpawn.generated.h"
+            "d:\\unreal projects\\geometrysandbox\\intermediate\\build\\win64\\unrealeditor\\inc\\geometrysandbox\\sandboxpawn.generated.h",
+            "d:\\unreal projects\\geometrysandbox\\source\\geometrysandbox\\public\\sandboxplayercontroller.h",
+            "d:\\unreal projects\\geometrysandbox\\intermediate\\build\\win64\\unrealeditor\\inc\\geometrysandbox\\sandboxplayercontroller.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

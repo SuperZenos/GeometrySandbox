@@ -26,6 +26,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Config\HoloLens">
       <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
     </Filter>
@@ -62,6 +65,9 @@
     <ClCompile Include="..\..\Source\GeometrySandbox\Private\SandboxPawn.cpp">
       <Filter>Source\GeometrySandbox\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GeometrySandbox\Private\SandboxPlayerController.cpp">
+      <Filter>Source\GeometrySandbox\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\GeometrySandbox\Public">
       <UniqueIdentifier>{0E31652A-E7CF-3790-809E-D4ADB91B5D82}</UniqueIdentifier>
     </Filter>
@@ -72,6 +78,9 @@
       <Filter>Source\GeometrySandbox\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GeometrySandbox\Public\SandboxPawn.h">
+      <Filter>Source\GeometrySandbox\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GeometrySandbox\Public\SandboxPlayerController.h">
       <Filter>Source\GeometrySandbox\Public</Filter>
     </ClInclude>
   </ItemGroup>
