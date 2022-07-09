@@ -26,9 +26,15 @@ public:
 	// Sets default values for this actor's properties
 	AGeometryHubActor();
 private:
+	ABaseGeometryActor* NonePropertyActor;
+
+	UPROPERTY()
+		ABaseGeometryActor* PropertyActor;
+
 	void DoActorSpawn_1();
 	void DoActorSpawn_2();
 	void DoActorSpawn_3();
+	void DoActorSpawn_4();
 
 	UFUNCTION()
 		void OnColorChanged(const FLinearColor& Color, const FString& Name);
