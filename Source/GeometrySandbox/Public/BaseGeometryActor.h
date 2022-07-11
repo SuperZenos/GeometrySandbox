@@ -13,95 +13,93 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FOnTimerFinished, AActor*);
 UENUM(BlueprintType)
 enum class EMovementType : uint8
 {
-	Sin,
-	Static
+    Sin,
+    Static
 };
 
 USTRUCT(BlueprintType)
 struct FGeometryData
 {
-	GENERATED_USTRUCT_BODY()
+    GENERATED_USTRUCT_BODY()
 
-		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-		float Amplitude = 50.0f;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+    float Amplitude = 50.0f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-		float Frequency = 2.0f;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+    float Frequency = 2.0f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-		EMovementType MoveType = EMovementType::Static;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+    EMovementType MoveType = EMovementType::Static;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Design")
-		FLinearColor Color = FLinearColor::Black;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Design")
+    FLinearColor Color = FLinearColor::Black;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Design")
-		float TimerRate = 3.0f;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Design")
+    float TimerRate = 3.0f;
 };
 
 UCLASS()
 class GEOMETRYSANDBOX_API ABaseGeometryActor : public AActor
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	// Sets default values for this actor's properties
-	ABaseGeometryActor();
+    // Sets default values for this actor's properties
+    ABaseGeometryActor();
 
-	UPROPERTY(VisibleAnywhere)
-		UStaticMeshComponent* BaseMesh;
+    UPROPERTY(VisibleAnywhere)
+    UStaticMeshComponent* BaseMesh;
 
-	void SetGeometryData(const FGeometryData Data) { GeometryData = Data; }
+    void SetGeometryData(const FGeometryData Data) { GeometryData = Data; }
 
-	UFUNCTION(BlueprintCallable)
-		FGeometryData GetGeometryData() const { return GeometryData; }
+    UFUNCTION(BlueprintCallable)
+    FGeometryData GetGeometryData() const { return GeometryData; }
 
-	UPROPERTY(BlueprintAssignable)
-		FOnColorChanged OnColorChanged;
+    UPROPERTY(BlueprintAssignable)
+    FOnColorChanged OnColorChanged;
 
-	FOnTimerFinished OnTimerFinished;
+    FOnTimerFinished OnTimerFinished;
 
 public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+    // Called every frame
+    virtual void Tick(float DeltaTime) override;
 
 private:
-	FVector Initiallocation;
+    FVector Initiallocation;
 
-	FTimerHandle TimerHandle;
+    FTimerHandle TimerHandle;
 
-	const int32 MaxTimerCount = 5;
-	int32 TimerCount = 0;
+    const int32 MaxTimerCount = 5;
+    int32 TimerCount = 0;
 
-	void PrintTypes();
-	void PrintStringTypes();
-	void PrintTransform();
-	void HandleMovement();
-	void SetColor(const FLinearColor& Color);
-	void OnTimerFired();
+    void PrintTypes();
+    void PrintStringTypes();
+    void PrintTransform();
+    void HandleMovement();
+    void SetColor(const FLinearColor& Color);
+    void OnTimerFired();
 
 protected:
+    // Called when the game starts or when spawned
+    virtual void BeginPlay() override;
 
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
-	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GeometryData")
+    FGeometryData GeometryData;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GeometryData")
-		FGeometryData GeometryData;
+    UPROPERTY(EditAnywhere, Category = "Weapon")
+    int32 WeaponsNum = 4;
 
-	UPROPERTY(EditAnywhere, Category = "Weapon")
-		int32 WeaponsNum = 4;
+    UPROPERTY(EditDefaultsOnly, Category = "Stat")
+    int32 KillsNum = 7;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Stat")
-		int32 KillsNum = 7;
+    UPROPERTY(EditInstanceOnly, Category = "Health")
+    float Health = 35.55555;
 
-	UPROPERTY(EditInstanceOnly, Category = "Health")
-		float Health = 35.55555;
+    UPROPERTY(EditAnywhere, Category = "Health")
+    bool isDead = 0;
 
-	UPROPERTY(EditAnywhere, Category = "Health")
-		bool isDead = 0;
-
-	UPROPERTY(VisibleAnywhere, Category = "Weapon")
-		bool HasWeapon = 1;
-
+    UPROPERTY(VisibleAnywhere, Category = "Weapon")
+    bool HasWeapon = 1;
 };

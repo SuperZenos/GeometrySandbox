@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 public class GeometrySandboxEditorTarget : TargetRules
 {
-	public GeometrySandboxEditorTarget( TargetInfo Target) : base(Target)
-	{
-		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.AddRange( new string[] { "GeometrySandbox" } );
-	}
+    public GeometrySandboxEditorTarget(TargetInfo Target) : base(Target)
+    {
+        Type = TargetType.Editor;
+        DefaultBuildSettings = BuildSettingsVersion.V2;
+        ExtraModuleNames.AddRange(new string[] { "GeometrySandbox" });
+    }
 }

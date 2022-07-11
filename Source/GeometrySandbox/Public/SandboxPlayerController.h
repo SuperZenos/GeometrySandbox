@@ -7,23 +7,23 @@
 #include "SandboxPlayerController.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class GEOMETRYSANDBOX_API ASandboxPlayerController : public APlayerController
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
+
 protected:
-	virtual void BeginPlay() override;
-	virtual void SetupInputComponent() override;
-	
+    virtual void BeginPlay() override;
+    virtual void SetupInputComponent() override;
+
 private:
-	UPROPERTY()
-		TArray<AActor*> Pawns;
+    UPROPERTY()
+    TArray<AActor*> Pawns;
 
-	UPROPERTY()
-		int32 CurrentPawnIndex = 0;
+    UPROPERTY()
+    int32 CurrentPawnIndex = 0;
 
-	void ChangePawn();
+    void ChangePawn();
 };
